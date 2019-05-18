@@ -36,6 +36,15 @@ find_library( # Sets the name of the path variable.
 # can link multiple libraries, such as libraries you define in this
 # build script, prebuilt third-party libraries, or system libraries.
 
+
+
+add_subdirectory(sub_module)
+include_directories(sub_module)
+add_subdirectory(common)
+include_directories(common)
+
+
+
 target_link_libraries( # Specifies the target library.
                        native-lib
 
